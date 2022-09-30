@@ -6,27 +6,27 @@ TigitalConnect!
 
 INSTALLATION:
 
-```pip install tigitaalconnect```
+`pip install tigitaalconnect`
 
 REQUESTS:
 
 Reload Request:
-```
+```python
 Reload(token)
 ```
 ReloadAdvanced Request: 
-```
+```python
 reloadadvanced(username, password)
 ```
 PFP Request:
-```
+```python
 pfp(username, password, fileid)
 ```
 Nickname Request:
-```
+```python
 nickname(username, password, new_nickname)
 ```
 Mail Request:
-```
+```python
 mail(username, password, new_email)
 ```
