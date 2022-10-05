@@ -1,6 +1,6 @@
 import requests
 
-class UserConnect():
+class login():
     
   def __init__(self, username, password):
       self.username = username
@@ -31,3 +31,30 @@ class UserConnect():
 #   def aboutme(self, aboutme):
 #       response = requests.post(f'https://api.tigitaal.nl/user/aboutme/{self.username}/{self.password}/{aboutme}')
 #       return response.json()
+
+class forum():
+    
+    def messages(forumid):
+        json = {"forumid": forumid}
+        response = requests.post("https://api.tigitaal.nl/forum/messages/", json=json)
+        return response.json()
+        
+    def threads(forumid):
+        json = {"forumid": forumid}
+        response = requests.post("https://api.tigitaal.nl/forum/threads/", json=json)
+        return response.json()
+        
+    def post(user, text, forumid):
+        json = {"text": text, "forumid": forumid, "token": user.token}
+        response = requests.post("https://api.tigitaal.nl/forum/post/", json=json)
+        return response.json()
+        
+    def edit(user, text, forumid, messageid):
+        json = {"text": text, "forumid": forumid, "token": user.token, "count": messageid}
+        response = requests.post("https://api.tigitaal.nl/forum/edit/", json=json)
+        return response.json()
+     
+    def all():
+        response = requests.get("https://api.tigitaal.nl/forum/getforums/")
+        return response.json()
+        
