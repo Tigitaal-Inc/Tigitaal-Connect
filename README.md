@@ -9,25 +9,35 @@ TigitalConnect!
 
 `pip install tigitaalconnect`
 
+
+## SETUP:
+
+### UserConnect: 
+```python
+from  tigitaalconnect import UserConnect
+user = UserConnect(username, password)
+# Enter your username and password in the parantheses
+```
+
 # REQUESTS:
 
 ## Reload Request:
 ```python
-reload(token)
+user.reload()
 ```
 ## ReloadAdvanced Request: 
 ```python
-reloadadvanced(username, password)
+user.reloadadvanced()
 ```
 ## PFP Request:
 ```python
-pfp(username, password, fileid)
+user.pfp(fileid)
 ```
 ## Nickname Request:
 ```python
-nickname(username, password, new_nickname)
+user.nickname(new_nickname)
 ```
 ## Mail Request:
 ```python
-mail(username, password, new_email)
+user.mail(new_email)
 ```
