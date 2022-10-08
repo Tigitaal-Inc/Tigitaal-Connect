@@ -14,8 +14,8 @@ TigitalConnect!
 
 ### UserConnect: 
 ```python
-from  tigitaalconnect import UserConnect
-user = UserConnect(username, password)
+from  tigitaalconnect import login
+user = login(username, password)
 # Enter your username and password in the parantheses
 ```
 
@@ -40,4 +40,32 @@ user.nickname(new_nickname)
 ## Mail Request:
 ```python
 user.mail(new_email)
+```
+
+# FORUM:
+
+## Setup
+```python
+from  tigitaalconnect import forum
+```
+## Messages Request
+```python
+forum.messages(forumid)
+```
+## Threads Request
+```python
+forum.threads(forumid)
+```
+## Post Request
+```python
+forum.post(user, text, forumid)
+# user is the variable you created earlier to login
+```
+## Edit Request
+```python
+forum.edit(user, text, forumid, messageid)
+```
+## All Request
+```python
+forum.all()
 ```
